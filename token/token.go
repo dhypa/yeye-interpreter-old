@@ -1,9 +1,11 @@
 package token
 
 type Token struct {
-	Type    string
+	Type    TokenType
 	Literal string
 }
+
+type TokenType string
 
 const (
 	ILLEGAL = "ILLEGAL"
@@ -13,9 +15,12 @@ const (
 	INT        = "INT"        // integer, duh
 	LITERAL    = "LITERAL"    // for strings and stuff, idk
 
-	ASSIGN = "="
-	PLUS   = "+"
-	MINUS  = "-"
+	// operators
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	MULTIPLY = "*"
+	DIVIDE   = "/"
 
 	//delimiters
 	COMMA       = ","
