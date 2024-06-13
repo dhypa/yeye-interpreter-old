@@ -7,6 +7,19 @@ type Token struct {
 
 type TokenType string
 
+var keywords = map[string]TokenType{
+	"fn":  FUNCTION,
+	"let": LET,
+}
+
+func LookUpKeyword(identifier string) TokenType {
+	if tokenType, ok := keywords[identifier]; ok {
+		return tokenType
+	}
+	return IDENTIFIER
+
+}
+
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF" // end of file

@@ -65,7 +65,7 @@ func TestNextToken(t *testing.T) {
 		tok := lexer.nextToken()
 
 		if tok.Type != tt.expectedType {
-			t.Fatalf("Test %d failed - Token Type invalid. Expected:[%q] Got:[%q]", i, tt.expectedType, tok.Type)
+			t.Fatalf("Test %d failed - Token Type invalid. Expected:[%q] Got:[%q]", i+1, tt.expectedType, tok.Type)
 		}
 
 		if tok.Literal != tt.expectedLiteral {
