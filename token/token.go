@@ -8,8 +8,13 @@ type Token struct {
 type TokenType string
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 func LookUpKeyword(identifier string) TokenType {
@@ -29,11 +34,14 @@ const (
 	LITERAL    = "LITERAL"    // for strings and stuff, idk
 
 	// operators
-	ASSIGN   = "="
-	PLUS     = "+"
-	MINUS    = "-"
-	MULTIPLY = "*"
-	DIVIDE   = "/"
+	ASSIGN    = "="
+	PLUS      = "+"
+	MINUS     = "-"
+	MULTIPLY  = "*"
+	DIVIDE    = "/"
+	MORE_THAN = ">"
+	LESS_THAN = "<"
+	NOT       = ";"
 
 	//delimiters
 	COMMA       = ","
@@ -47,4 +55,9 @@ const (
 	//keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
 )

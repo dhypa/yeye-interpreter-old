@@ -14,6 +14,16 @@ func TestNextToken(t *testing.T) {
 	}!
 
 	let result = timeTaken(distance, speed)!
+
+	<>!/* */
+
+	let x = 6!
+	let y = 4!
+
+	if (x<y){
+		x = x+y !
+	} else {
+	
 	`
 
 	tests := []struct {
@@ -56,6 +66,42 @@ func TestNextToken(t *testing.T) {
 		{token.IDENTIFIER, "speed"},
 		{token.RBRACKET, ")"},
 		{token.EXCLAMATION, "!"},
+		{token.LESS_THAN, "<"},
+		{token.MORE_THAN, ">"},
+		{token.EXCLAMATION, "!"},
+		{token.DIVIDE, "/"},
+		{token.MULTIPLY, "*"},
+		{token.MULTIPLY, "*"},
+		{token.DIVIDE, "/"},
+
+		{token.LET, "let"},
+		{token.IDENTIFIER, "x"},
+		{token.ASSIGN, "="},
+		{token.INT, "6"},
+		{token.EXCLAMATION, "!"},
+
+		{token.LET, "let"},
+		{token.IDENTIFIER, "y"},
+		{token.ASSIGN, "="},
+		{token.INT, "4"},
+		{token.EXCLAMATION, "!"},
+		{token.IF, "if"},
+		{token.LBRACKET, "("},
+		{token.IDENTIFIER, "x"},
+		{token.LESS_THAN, "<"},
+		{token.IDENTIFIER, "y"},
+		{token.RBRACKET, ")"},
+		{token.LBRACE, "{"},
+		{token.IDENTIFIER, "x"},
+		{token.ASSIGN, "="},
+		{token.IDENTIFIER, "x"},
+		{token.PLUS, "+"},
+		{token.IDENTIFIER, "y"},
+		{token.EXCLAMATION, "!"},
+		{token.RBRACE, "}"},
+		{token.ELSE, "else"},
+		{token.LBRACE, "{"},
+
 		{token.EOF, ""},
 	}
 

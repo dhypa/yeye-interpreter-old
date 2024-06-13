@@ -45,8 +45,15 @@ func (lexer *Lexer) nextToken() token.Token {
 		tok = token.Token{Type: token.DIVIDE, Literal: string(lexer.ch)}
 	case '-':
 		tok = token.Token{Type: token.MINUS, Literal: string(lexer.ch)}
+	case ';':
+		tok = token.Token{Type: token.NOT, Literal: string(lexer.ch)}
+	case '<':
+		tok = token.Token{Type: token.LESS_THAN, Literal: string(lexer.ch)}
+	case '>':
+		tok = token.Token{Type: token.MORE_THAN, Literal: string(lexer.ch)}
 	case ',':
 		tok = token.Token{Type: token.COMMA, Literal: string(lexer.ch)}
+
 	case '!':
 		tok = token.Token{Type: token.EXCLAMATION, Literal: string(lexer.ch)}
 	case '(':
