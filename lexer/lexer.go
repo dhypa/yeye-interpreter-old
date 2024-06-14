@@ -36,7 +36,7 @@ func (lexer *Lexer) peekChar() byte {
 	}
 }
 
-func (lexer *Lexer) nextToken() token.Token {
+func (lexer *Lexer) NextToken() token.Token {
 	var tok token.Token
 
 	lexer.INHALEWHITESPACE()
