@@ -42,6 +42,8 @@ const (
 	MORE_THAN = ">"
 	LESS_THAN = "<"
 	NOT       = ";"
+	EQV       = "=="
+	NOT_EQV   = "!="
 
 	//delimiters
 	COMMA       = ","
