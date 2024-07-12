@@ -19,8 +19,8 @@ func Start(in io.Reader, out io.Writer) {
 			return
 		}
 
-		lexer := lexer.New(scanner.Text())
-		for tok := lexer.NextToken(); tok.Type != token.EOF; tok = lexer.NextToken() {
+		l := lexer.New(scanner.Text())
+		for tok := l.NextToken(); tok.Type != token.EOF; tok = l.NextToken() {
 			fmt.Printf("%+v\n", tok)
 		}
 	}
