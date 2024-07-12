@@ -1,0 +1,6 @@
+
+
+let <IDENTIFIER> = <EXPRESSION>!
+// examples:
+// let x = 2
+// let mult = fn(a,b) { return a * b! }!
