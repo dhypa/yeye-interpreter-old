@@ -1,3 +1,3 @@
 ** abandoned project **
 
-I wanted to learn about interpereters and this was the result. 
+An interpeter I was trying to write because I had some interest in interpreters. The language it uses is fake and made up by me. 
